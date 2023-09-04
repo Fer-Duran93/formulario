@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'handel', sans-serif;
+    min-height: 600px;
+    padding: 80px 0;
+    background-image:linear-gradient(to top, #6b7ea3 0%, #080808 100%);
+    background-color: #a3bded;
+    background-repeat: no-repeat;
+
+    display: flex;
+}
+
+.main{
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    background-image: linear-gradient(to left, rgba(163, 163, 163, 0.472), rgba(238, 236, 236, 0.365));
+    overflow: hidden;
+    padding: .7em;
+    border-radius: 1em;
+
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: .6em;
+    animation: mostrar 1.5s ease-in-out;
+
+}
+
+@keyframes mostrar {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.main__figure{
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: #000000;
+    display:flex;
+    width:auto;
+
+}
+
+.main__img{
+    margin:auto;
+    width:100%;
+    max-width:100% ;
+    background-size: cover;
+    height:auto;
+    max-height:max-content; 
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.main__img2{
+    margin: 0.1em;
+    padding: 5px;
+    width: 80%;
+    max-width: 60vw;
+}
+
+.main__img3{
+    margin:auto;
+    width: 26%;
+    height: auto;
+    max-width:50vw;
+    object-fit: cover;
+}
+
+.main__img4{
+    margin:auto;
+    width: 60%;
+    height: auto;
+    max-width:60vw;
+    object-fit: cover;
+}
+
+.main__img5{
+    margin:auto;
+    width: 37%;
+    height: auto;
+    max-width:60vw;
+    object-fit: cover;
+}
+
+.main__img6{
+    margin:auto;
+    width: 49%;
+    height: auto;
+    max-width:60vw;
+    object-fit: cover;
+}
+.main__img7{
+    margin:auto;
+    width: 46%;
+    height: auto;
+    max-width:30vw;
+    object-fit: cover;
+}
+
+
+
+.main__contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 3em .7em;
+    text-align: center;
+}
+
+.main__form{
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+}
+
+.main__input{
+    width: 80%;
+    max-width: 500px;
+    outline: none;
+    border: none;
+    padding: 0.8em;
+    font: inherit;
+    border-radius: .6em;
+    
+}
+
+.main__input--send{
+    background-color: #da4742;
+    color: #fff;
+    font-weight: 600;
+}
+.main__input--send:hover{
+    background-color:#c93631 ;
+
+}
+
+.main__title{
+    font-size: 700;
+}
+
+.main__paragraph{
+    margin: .3em 0.3em;
+    font-family: sans-serif;
+    width:60%;
+    text-align: center;
+
+}
+
+
+.main__social{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+
+.main__link{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: .6em 1.5em;
+}
+
+.main__link:hover{
+    background-color: #fff;
+}
+
+.main__icon{
+    width: 30px;
+    height: 30px;
+}
+/* Estilos iniciales para el campo de entrada adicional */
+.campo-adicional {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 5s ease-in-out, opacity 5s ease-in-out;
+  }
+  
+  /* Estilos para el campo de entrada dentro del div */
+  #informacion {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 2s ease-in-out;
+  }
+  
+  /* Estilos cuando se muestra */
+  .campo-adicional.mostrar {
+    max-height: 100px; /* Ajusta la altura deseada */
+    opacity: 1;
+  }
+  

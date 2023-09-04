@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css" />
+    
+  </head>
+  <body>
+    <section class="main">
+      <figure class="main__figure">
+        <img src="/img/12horas22.jfif" alt="" class="main__img" />
+      </figure>
+
+      <div class="main__contact">
+        <h2 class="main__title">
+          <img src="img/logo.svg" class="main__img2" alt="" />
+        </h2>
+        <h2 class="main__paragraph">
+          <img src="img/ben-vindosdc1.svg" class="main__img2" alt="" />
+        </h2>
+
+        <form
+          class="main__form"
+          action="https://formspree.io/f/mnqkvnwv"
+          method="POST"
+        >
+          <p><img src="img/nomesdc1.svg" class="main__img3" alt="" /></p>
+          <input
+            type="text"
+            placeholder="NOME"
+            required
+            name="Nome"
+            class="main__input"
+          />
+          <p><img src="img/sobrenomesdc1.svg" class="main__img5" alt="" /></p>
+          <input
+            type="text"
+            placeholder="SOBRENOME"
+            required
+            name="Sobrenome"
+            class="main__input"
+          />
+          
+         <p><img src="img/PREGUNTASDC22.svg" class="main__img6" alt="" /></p>
+          <select id="respuesta" name="respuesta" class="main__input">
+            <option value="no">NÃO</option>
+            <option value="si">SIM</option>
+          </select>
+          <p id="adicional" style="display: none">
+            <img src="img/iglejasdc1.svg" class="main__img7" alt="">
+            <input type="text" id="informacion" class="main__input" name="informacion" />
+          </p>
+
+          <p><img src="img/emailsdc1_1.svg" class="main__img3" alt="" /></p>
+          <input
+            type="email"
+            placeholder="EMAIL"
+            required
+            id="email"
+            name="Email"
+            class="main__input"
+          />
+          <p><img src="img/datasdc1.svg" class="main__img4" alt="" /></p>
+          <input
+            type="date"
+            placeholder="DATA"
+            required
+            name="Aniversario"
+            class="main__input"
+          />
+          <input
+            type="submit"
+            id="submitBtn"
+            value="ENVIAR"
+            class="main__input main__input--send"
+          />
+        </form>
+      </div>
+    </section><script>
+        //     function showInputField() {
+        //     let select = document.getElementById('pergunta');
+        //     let selectedValue = select.value;
+        //     let inputContainer = document.getElementById('iglesia');
+  
+        //     if (selectedValue === 'si') {
+        //       inputContainer.innerHTML = '<label for="additionalInput">Ingrese otro valor:</label>' +
+        //                                  '<input type="text" id="iglesia" name="Iglesia">';
+        //     } else {
+        //       inputContainer.innerHTML = ''; // Limpia el contenido del contenedor
+        //     }
+        //   }
+        const respuestaSelect = document.getElementById("respuesta");
+        const informacionDiv = document.getElementById("adicional");
+  
+        respuestaSelect.addEventListener("change", function () {
+          if (respuestaSelect.value === "si") {
+            informacionDiv.style.display = "block";
+            document
+              .getElementById("informacion")
+              .setAttribute("required", "required"); // Opcional: Hacer que el campo sea obligatorio
+          } else {
+            informacionDiv.style.display = "none";
+            document.getElementById("informacion").removeAttribute("required");
+          }
+        });
+      </script>
+  </body>
+</html>
