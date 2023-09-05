@@ -9,7 +9,7 @@ body{
     min-height: 600px;
     padding: 80px 0;
     background-image:linear-gradient(to top, #6b7ea3 0%, #080808 100%);
-    background-color: #a3bded;
+    background-color: #6b7ea3;
     background-repeat: no-repeat;
 
     display: flex;
